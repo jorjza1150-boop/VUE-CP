@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap');
+
+:root {
+    font-family: 'Noto Sans Thai', sans-serif;
+    color: #142e51;
+    background: #fff;
+    font-synthesis: none;
+    --accent: #087f65;
+    --border: #dfe5ed;
+    --muted: #60738c
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+main {
+    max-width: 1208px;
+    margin: auto;
+    padding: 32px 24px
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 1.35;
+    margin: 0 0 8px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+.author {
+    color: var(--muted);
+    font-size: 18px;
+    margin: 0 0 6px
+}
+
+.assignment {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600
+}
+
+button,
+input {
+    font: inherit
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background .15s
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: wait
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible,
+.table-wrap:focus-visible {
+    outline: 3px solid #53b8a4;
+    outline-offset: 3px
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border)
+}
+
+nav button {
+    padding: 15px 26px;
+    background: #f3f5f8;
+    color: var(--muted);
+    border-radius: 7px 7px 0 0
+}
+
+nav button.selected,
+.refresh {
+    background: var(--accent);
+    color: white
+}
+
+nav button:hover {
+    background: #e7f4ef
+}
+
+nav button.selected:hover,
+.refresh:hover {
+    background: #086c57
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 20px 0
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cad5e3;
+    border-radius: 6px;
+    width: 550px;
+    max-width: 100%;
+    padding: 0 14px;
+    color: var(--muted)
+}
+
+svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0
+}
+
+input {
+    border: 0;
+    background: transparent;
+    padding: 11px 12px;
+    min-width: 0;
+    width: 100%;
+    font-size: 15px;
+    color: #142e51
+}
+
+input:focus {
+    outline: none
+}
+
+.search:focus-within {
+    outline: 2px solid #53b8a4
+}
+
+.refresh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 11px 18px;
+    border-radius: 6px;
+    white-space: nowrap
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 23px 0 16px
+}
+
+.section-heading h2 {
+    font-size: 20px;
+    margin: 0
+}
+
+.section-heading span {
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px
+}
+
+.product {
+    border: 1px solid var(--border);
+    padding: 13px;
+    border-radius: 8px;
+    min-width: 0
+}
+
+.photo {
+    background: #f4f5f6;
+    border-radius: 6px;
+    aspect-ratio: 1.15;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.photo img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain
+}
+
+.product h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 13px 0 5px;
+    min-height: 45px;
+    overflow-wrap: anywhere
+}
+
+.category {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 12px
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px
+}
+
+.price-row strong {
+    font-size: 18px;
+    color: var(--accent)
+}
+
+.price-row span {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 7px
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 14px
+}
+
+th {
+    background: #f2f5f8;
+    font-weight: 600;
+    padding: 14px 16px
+}
+
+td {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border)
+}
+
+tbody tr:hover {
+    background: #f8fbfa
+}
+
+.thumbnail {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    background: #f4f5f6;
+    border-radius: 4px;
+    display: block
+}
+
+.name {
+    font-weight: 500;
+    white-space: normal;
+    min-width: 180px
+}
+
+.price {
+    color: var(--accent);
+    font-weight: 600
+}
+
+.message {
+    padding: 30px;
+    text-align: center;
+    background: #f4f7fa;
+    border-radius: 6px
+}
+
+.error {
+    background: #fff1ef;
+    color: #a03227;
+    padding: 18px
+}
+
+.error button {
+    background: transparent;
+    color: inherit;
+    text-decoration: underline
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    margin-top: 36px
+}
+
+a {
+    color: var(--accent)
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0
+}
+
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+}
+
+@media(max-width:650px) {
+    main {
+        padding: 24px 16px
+    }
+
+    h1 {
+        font-size: 32px
+    }
+
+    .author,
+    .assignment {
+        font-size: 15px
+    }
+
+    nav {
+        gap: 4px
+    }
+
+    nav button {
+        padding: 12px 8px;
+        font-size: 12px;
+        flex: 1
+    }
+
+    .toolbar {
+        gap: 10px;
+        flex-wrap: wrap
+    }
+
+    .search {
+        width: 100%
+    }
+
+    .refresh {
+        margin-left: auto
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px
+    }
+
+    .product {
+        padding: 9px
+    }
+
+    .product h3 {
+        font-size: 13px
+    }
+
+    .price-row {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .price-row strong {
+        font-size: 16px
+    }
+
+    .section-heading h2 {
+        font-size: 18px
+    }
+}
